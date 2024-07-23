@@ -170,6 +170,8 @@ alias jkrestart='sudo systemctl restart jenkins'
 alias jkstatus='sudo systemctl status jenkins'
 alias jkedit='sudo nano /lib/systemd/system/jenkins.service'
 alias jkeditdefault='sudo nano /etc/default/jenkins'
+alias jkenable='sudo systemctl enable jenkins'
+alias jkreload='sudo q systemctl daemon-reload'
 
 
 # Other
