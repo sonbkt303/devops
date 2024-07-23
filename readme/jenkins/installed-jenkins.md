@@ -7,6 +7,11 @@
     - [Generate developer personal access token](#generate-developer-personal-access-token)
     - [Config github account with jenkins](#config-github-account-with-jenkins)
       - [Go to: Manage Jenkins \> System \> Go to Git hub](#go-to-manage-jenkins--system--go-to-git-hub)
+  - [Install jenkins docker plugins](#install-jenkins-docker-plugins)
+  - [Setup Email notification](#setup-email-notification)
+    - [Step 1: Install Email extension](#step-1-install-email-extension)
+    - [Step 2: Configure Email](#step-2-configure-email)
+    - [Step 3: Fix setup email if require](#step-3-fix-setup-email-if-require)
 
 
 # Install Jenkins
@@ -75,3 +80,13 @@ OpenJDK 64-Bit Server VM (build 17.0.8+7-Debian-1deb12u1, mixed mode, sharing)
 
 ![alt text](../images/jenkins/jenkins-docker-plugins.png)
 
+## Setup Email notification
+
+### Step 1: Install Email extension
+### Step 2: Configure Email 
+
+![alt text](../images/jenkins/jenkins-email-config.png)
+
+### Step 3: Fix setup email if require
+- Turn on security app: https://support.google.com/accounts/answer/185839?sjid=11118287221127811570-AP
+- Support create google app account: https://support.google.com/accounts/answer/185833?sjid=11118287221127811570-AP
