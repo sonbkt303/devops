@@ -20,6 +20,7 @@ alias dklogin='docker login'
 alias dktag='docker image tag' # Copy image to another name. Ex: docker image tag 3c784ee0df0a kimsonbui/currency-exchange-devops
 alias dkpush='docker image push' # Push image to docker hub. Ex: docker image push {image}:{tag}
 alias dkdelall='docker rm -v -f $(docker ps -qa)'
+alias dkprune='docker system prune'
 
 
 # Kubectl
