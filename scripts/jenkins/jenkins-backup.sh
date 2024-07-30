@@ -1,6 +1,18 @@
 #!/bin/bash
 
-sudo tar -zcvf ~/jenkins-backup.tar.gz /var/lib/jenkins
+fileName=$1
+DATE=$(date '+%Y-%m-%d')
 
-aws s3 cp ~/jenkins-backup.tar.gz s3://jenkins-2024/jenkins-backup.tar.gz
+if [ -z "${fileName}" ]; then
+    fileName="jenkins-backup-$DATE.tar.gz"
+    # echo "VAR is unset or set to the empty string $fileName"
+else
+    fileName=$1
+fi
+
+echo $fileName
+
+sudo tar -zcvf ~/$fileName /var/lib/jenkins
+
+aws s3 cp ~/$fileName s3://jenkins-2024/$fileName
 
