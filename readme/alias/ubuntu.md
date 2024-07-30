@@ -1,3 +1,4 @@
+```bash
 # GIT
 alias hi='echo hello world'
 alias gst='git status'
@@ -181,6 +182,9 @@ alias jkedit='sudo nano /lib/systemd/system/jenkins.service'
 alias jkeditdefault='sudo nano /etc/default/jenkins'
 alias jkenable='sudo systemctl enable jenkins'
 alias jkreload='sudo q systemctl daemon-reload'
+alias jkbackup='sudo tar -zcvf jenkins-backup.tar.gz /var/lib/jenkins/'
+alias jk2S3='sudo tar -zcvf jenkins-backup.tar.gz /var/lib/jenkins/'
+
 
 
 # Other
@@ -197,3 +201,5 @@ alias sshgen='ssh-keygen -m PEM -t rsa -b 4096' # ssh-keygen -t rsa -b 4096 -C "
 alias osupdate='sudo apt-get update'
 alias osreload='sudo systemctl daemon-reload'
 alias edithosts='sudo nano /etc/hosts'
+
+```
