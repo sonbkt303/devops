@@ -22,6 +22,10 @@ alias dktag='docker image tag' # Copy image to another name. Ex: docker image ta
 alias dkpush='docker image push' # Push image to docker hub. Ex: docker image push {image}:{tag}
 alias dkdelall='docker rm -v -f $(docker ps -qa)'
 alias dkprune='docker system prune'
+alias dkup='docker-compose up'
+alias dkdown='docker-compose down'
+
+
 
 
 # Kubectl

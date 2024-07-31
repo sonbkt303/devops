@@ -1,0 +1,20 @@
+version: "3"
+services:
+  mongodb:
+    container_name: testMongoDB
+    image: mongo:6
+    restart: always
+    command:
+      - --storageEngine
+      - wiredTiger
+      - --auth
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_INITDB_ROOT_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_INITDB_ROOT_PASSWORD}
+      - MONGO_INITDB_DATABASE=${MONGO_INITDB_DATABASE}
+    ports:
+      - "27018:27017"
+    volumes:
+      - ./mongodb-data:/data/db
+      - ./mongodb/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
+    env_file: .env
