@@ -24,8 +24,13 @@ alias dkdelall='docker rm -v -f $(docker ps -qa)'
 alias dkprune='docker system prune'
 alias dkup='docker-compose up'
 alias dkdown='docker-compose down'
+alias dkrun='docker run -p 3000:3000 -name node-lib -d node-lib:v1'
 
-
+dkbuild () {
+    # $1 = $secret name
+    # $2 = number of replica
+    docker build -t $1 .
+}
 
 
 # Kubectl
