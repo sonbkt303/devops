@@ -6,6 +6,7 @@
 
 
 [Install From Apt (Debian/Ubuntu)](https://helm.sh/docs/intro/install/)
+https://artifacthub.io/packages/helm/prometheus-community/kube-prometheus-stack
 
 ```bash
 curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
