@@ -61,7 +61,7 @@ alias kbsc='kubectl get sc' # Get storage class
 alias kbns='kubectl get namespace'
 alias kbcreatens='kubectl create namespace'
 alias kbconfigmap='kubectl get configmap' # kubectl get configmap -n (n is namespace)
-alias kbdelpod='kubectl delete pod -f ' # kubectl get configmap -n (n is namespace)
+alias kbdelpod='kubectl delete pod -f' # kubectl get configmap -n (n is namespace)
 
 
 
