@@ -111,9 +111,18 @@ kbgetsecret () {
 sshAws () {
     # ssh -i "/home/ku_dev/.ssh/aws/k8s/k8s2024.pem" ubuntu@ec2-54-173-183-41.compute-1.amazonaws.com
     ip=$1;
-    ipUpdated="${ip//./-}"
-    echo Remote Ip addess is: $ipUpdated
-    sudo ssh -i "/home/ku_dev/.ssh/aws/k8s/k8s2024.pem" ubuntu@ec2-$ipUpdated.compute-1.amazonaws.com
+    # ipUpdated="${ip//./-}"
+    # echo Remote Ip addess is: $ipUpdated
+    # sudo ssh -i "/home/ku_dev/.ssh/aws/k8s/k8s2024.pem" ubuntu@$ipUpdated
+    sudo ssh -i "/home/ku_dev/.ssh/aws/k8s/k8s2024.pem" ubuntu@$1
+}
+
+sshAlias () {
+    ip=$1;
+
+    scp -i /home/$USER/.ssh/aws2024.pem /home/$USER/.bash_aliases ubuntu@$ip:/home/ubuntu/.bash_aliases
+
+    sudo ssh -i /home/$USER/.ssh/aws2024.pem ubuntu@$1 "source ~/.bash_aliases"
 }
 
 
