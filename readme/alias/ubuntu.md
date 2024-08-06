@@ -66,10 +66,6 @@ alias kbconfigmap='kubectl get configmap' # kubectl get configmap -n (n is names
 alias kbdelpod='kubectl delete pod -f' 
 alias kbcreatetoken='kubeadm token create --print-join-command' 
 
-
-
-
-
 alias kbsecret='kubectl get secrets -o wide'
 alias kbdessecret='kubectl describe secret'
 alias kbgetall='kubectl get all'
@@ -133,6 +129,23 @@ sshAlias () {
     sudo ssh -i /home/$USER/.ssh/aws2024.pem ubuntu@$1 "source ~/.bash_aliases"
 }
 
+initServer() {
+    cd /home/ku_dev/repositories/devops/scripts/terraform/instance-infrasructure
+    terraform apply -auto-approve
+
+    ip=$(terraform output instance_public_ip);
+
+    echo "Ip: $ip"
+
+    ip=${ip//\"/}
+    echo scp -i /home/$USER/.ssh/aws2024.pem /home/$USER/.bash_aliases ubuntu@$ip:/home/ubuntu/.bash_aliases
+    scp -i /home/$USER/.ssh/aws2024.pem /home/$USER/.bash_aliases ubuntu@$ip:/home/ubuntu/.bash_aliases
+
+    # sudo ssh -i /home/$USER/.ssh/aws2024.pem ubuntu@$1 "source ~/.bash_aliases"
+
+    # sshAlias $ip;
+}
+
 
 # Minikube
 alias mn='minikube'
@@ -173,6 +186,8 @@ alias terwslist='terraform workspace list'
 alias terwsselect='terraform workspace select'
 alias terstatelist='terraform state list'
 alias terversion='terraform version'
+alias teroutput='terraform output'
+
 
 
 # Azure CLI
