@@ -131,7 +131,7 @@ sshAlias () {
 
 initServer() {
     cd /home/ku_dev/repositories/devops/scripts/terraform/instance-infrasructure
-    
+
     terraform apply -auto-approve
 
     ip=$(terraform output instance_public_ip);
@@ -181,6 +181,7 @@ alias terapply='terraform apply'
 alias terapplyauto='terraform apply -auto-approve'
 alias terfmt='terraform fmt'
 alias terdestroy='terraform destroy'
+alias terdestroyauto='terraform destroy -auto-approve'
 alias terfmt='terraform fmt'
 alias terclg='terraform console'
 alias tervalid='terraform validate'
