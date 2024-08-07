@@ -131,23 +131,24 @@ sshAlias () {
 
 initServer() {
     cd /home/ku_dev/repositories/devops/scripts/terraform/instance-infrasructure
+    
     terraform apply -auto-approve
 
     ip=$(terraform output instance_public_ip);
 
-    echo "Ip: $ip"
+    # echo "Ip: $ip"
 
-    ip=${ip//\"/}
+    # ip=${ip//\"/}
 
-    echo $ip
+    # echo $ip
 
-    sleep 2s;
+    # sleep 2s;
 
-    echo scp -i /home/$USER/.ssh/aws2024.pem /home/$USER/.bash_aliases ubuntu@$ip:/home/ubuntu/.bash_aliases
+    # echo scp -i /home/$USER/.ssh/aws2024.pem /home/$USER/.bash_aliases ubuntu@$ip:/home/ubuntu/.bash_aliases
 
-    sudo scp -i /home/$USER/.ssh/aws2024.pem /home/$USER/.bash_aliases ubuntu@$ip:/home/ubuntu/.bash_aliases
+    # sudo scp -i /home/$USER/.ssh/aws2024.pem /home/$USER/.bash_aliases ubuntu@$ip:/home/ubuntu/.bash_aliases
 
-    sudo ssh -i /home/$USER/.ssh/aws2024.pem ubuntu@$ip "source ~/.bash_aliases"
+    # sudo ssh -i /home/$USER/.ssh/aws2024.pem ubuntu@$ip "source ~/.bash_aliases"
 
     # sshAlias $ip;
 }
