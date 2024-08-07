@@ -56,10 +56,18 @@ alias kblogs='kubectl logs'
 alias kbdpmdel='kubectl delete deployment'
 alias kbproxy='kubectl proxy'
 alias kbdes='kubectl describe'
+alias kbdespod='kubectl describe pods'
 alias kbrs='kubectl get rs -o wide'
 alias kbsc='kubectl get sc' # Get storage class
 alias kbns='kubectl get namespace'
 alias kbpodsns='kubectl get pod -namespace'
+alias kbdelns='kubectl delete ns'
+alias kbjobs='kubectl get jobs'
+alias kbdeljob='kubectl delete job'
+alias kbcj='kubectl get cronjob'
+alias kbdelcj='kubectl delete cronjob'
+alias kbdelrs='kubectl delete rs'
+
 
 alias kbcreatens='kubectl create namespace'
 alias kbconfigmap='kubectl get configmap' # kubectl get configmap -n (n is namespace)
@@ -243,12 +251,14 @@ alias asedit='sudo nano ~/.bash_aliases'
 alias osversion='cat /etc/os-release'
 alias terpath='cd /home/ku_dev/repositories/terraform'
 alias refresh='source ~/.bash_aliases'
-alias sshgen='ssh-keygen -m PEM -t rsa -b 4096' # ssh-keygen -t rsa -b 4096 -C "your_email@example.com" -f $HOME/.ssh/id_rsa
+alias sshgen='ssh-keygen -m PEM -t rsa -b 4096' # ssh-keygen -t rsa -b 4096 -C "your_email@example.com" -f $HOME/.ssh/
+
 
 
 # Other os
 alias osupdate='sudo apt-get update'
 alias osreload='sudo systemctl daemon-reload'
 alias edithosts='sudo nano /etc/hosts'
+alias cloudlog='cat /var/log/cloud-init-output.log'
 
 ```
