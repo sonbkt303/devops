@@ -139,9 +139,12 @@ initServer() {
 
     ip=${ip//\"/}
 
+    echo $ip
+
     sleep 2s;
-    
+
     echo scp -i /home/$USER/.ssh/aws2024.pem /home/$USER/.bash_aliases ubuntu@$ip:/home/ubuntu/.bash_aliases
+
     sudo scp -i /home/$USER/.ssh/aws2024.pem /home/$USER/.bash_aliases ubuntu@$ip:/home/ubuntu/.bash_aliases
 
     sudo ssh -i /home/$USER/.ssh/aws2024.pem ubuntu@$ip "source ~/.bash_aliases"
