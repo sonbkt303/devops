@@ -277,4 +277,10 @@ alias osreload='sudo systemctl daemon-reload'
 alias edithosts='sudo nano /etc/hosts'
 alias cloudlog='cat /var/log/cloud-init-output.log'
 
+certOneline () {
+    fileName=$1
+    echo "File Name: $fileName"
+    awk 'NR>2 { sub(/\r/, ""); printf "%s",last} { last=$0 }' $fileName
+}
+
 ```
