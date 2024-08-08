@@ -57,25 +57,35 @@ alias kbdpmdel='kubectl delete deployment'
 alias kbproxy='kubectl proxy'
 alias kbdes='kubectl describe'
 alias kbdespod='kubectl describe pods'
+alias kbdesnode='kubectl describe node'
+alias kbdessecret='kubectl describe secret'
+alias kbdessvc='kubectl describe service'
 alias kbrs='kubectl get rs -o wide'
 alias kbsc='kubectl get sc' # Get storage class
 alias kbns='kubectl get namespace'
 alias kbpodsns='kubectl get pod -namespace'
-alias kbdelns='kubectl delete ns'
+
 alias kbjobs='kubectl get jobs'
-alias kbdeljob='kubectl delete job'
 alias kbcj='kubectl get cronjob'
+
+alias kbdelns='kubectl delete ns'
+alias kbdeljob='kubectl delete job'
+alias kbdelpod='kubectl delete pod'
 alias kbdelcj='kubectl delete cronjob'
 alias kbdelrs='kubectl delete rs'
+alias kbdeldpm='kubectl delete deployment'
+alias kbdelsvc='kubectl delete service'
+alias kbdelpod='kubectl delete pod -f' 
+
+
+
+
 
 
 alias kbcreatens='kubectl create namespace'
 alias kbconfigmap='kubectl get configmap' # kubectl get configmap -n (n is namespace)
-alias kbdelpod='kubectl delete pod -f' 
 alias kbcreatetoken='kubeadm token create --print-join-command' 
-
 alias kbsecret='kubectl get secrets -o wide'
-alias kbdessecret='kubectl describe secret'
 alias kbgetall='kubectl get all'
 alias kbingress='kubectl get ingress' # kubectl get ingress -n namespace
 alias kbdesingress='kubectl describe ingress' # kubectl get ingress -n namespace
@@ -119,6 +129,12 @@ kbgetsecret () {
     # $2 = number of replica
     kubectl get secret $1 -o jsonpath='{.data}'
 }
+
+kbpodIp () {
+    podName=$1;
+    kubectl get pods -l run=$podName -o custom-columns=POD_IP:.status.podIPs
+}
+
 
 sshAws () {
     # ssh -i "/home/ku_dev/.ssh/aws/k8s/k8s2024.pem" ubuntu@ec2-54-173-183-41.compute-1.amazonaws.com
