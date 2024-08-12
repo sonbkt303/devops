@@ -1,0 +1,1 @@
+kubectl exec my-nginx-3800858182-jr4a2 -- printenv | grep SERVICE

@@ -189,6 +189,7 @@ alias mnip='echo $(minikube ip):$NODE_PORT'
 alias mnprofiles='minikube profile list'
 alias mnprofile='minikube profile' # Switch to minikube profile Ex: "minikube profile mike-bkt"
 alias mndel='minikube delete -p' # Delete profile minikube from mnprofile
+alias mnads='minikube addons list' # Dminikube addons list
 
 alias mnenableingress="minikube addons enable ingress"
 alias mnauditlogs="cat ~/.minikube/logs/audit.json"
