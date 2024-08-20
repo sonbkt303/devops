@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  fruits: mangoes
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2024-08-13T05:49:09Z"
+  name: fruits
+  namespace: default
+  resourceVersion: "170595"
+  uid: 6ca2a848-1786-4cae-87a0-f56571221bf8

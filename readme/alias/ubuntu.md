@@ -92,6 +92,7 @@ alias kbdesingress='kubectl describe ingress' # kubectl get ingress -n namespace
 alias kbcontext='kubectl config current-context' # kubectl config current-context {ingress} -n {namespace}
 alias kbconfigview='kubectl config view' # kubectl get configview
 alias kbsetns=' kubectl config set-context --current --namespace=' # set current namespace
+alias kbendpoint='kubectl get endpoints' # set current namespace
 
 
 
