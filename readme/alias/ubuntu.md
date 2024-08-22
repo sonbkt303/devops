@@ -76,6 +76,10 @@ alias kbdelrs='kubectl delete rs'
 alias kbdeldpm='kubectl delete deployment'
 alias kbdelsvc='kubectl delete service'
 alias kbdelpod='kubectl delete pod -f' 
+alias kbgetsystem='kubectl get pod -n kube-system'
+alias kbgetnsdb='kubectl get all -n kubernetes-dashboard'
+
+
 
 
 
