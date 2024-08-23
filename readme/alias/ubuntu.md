@@ -275,6 +275,7 @@ alias osversion='cat /etc/os-release'
 alias terpath='cd /home/ku_dev/repositories/terraform'
 alias refresh='source ~/.bash_aliases'
 alias sshgen='ssh-keygen -m PEM -t rsa -b 4096' # ssh-keygen -t rsa -b 4096 -C "your_email@example.com" -f $HOME/.ssh/
+alias net='netstat -ln'
 
 
 
