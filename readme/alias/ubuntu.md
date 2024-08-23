@@ -76,12 +76,11 @@ alias kbdelrs='kubectl delete rs'
 alias kbdeldpm='kubectl delete deployment'
 alias kbdelsvc='kubectl delete service'
 alias kbdelpod='kubectl delete pod -f' 
+alias kbgetall='kubectl get all'
+alias kball='kubectl get all'
+alias kbig='kubectl get ingress' # kubectl get ingress -n namespace
 alias kbgetsystem='kubectl get pod -n kube-system'
 alias kbgetnsdb='kubectl get all -n kubernetes-dashboard'
-
-
-
-
 
 
 
@@ -90,9 +89,8 @@ alias kbcreatens='kubectl create namespace'
 alias kbconfigmap='kubectl get configmap' # kubectl get configmap -n (n is namespace)
 alias kbcreatetoken='kubeadm token create --print-join-command' 
 alias kbsecret='kubectl get secrets -o wide'
-alias kbgetall='kubectl get all'
-alias kbingress='kubectl get ingress' # kubectl get ingress -n namespace
-alias kbdesingress='kubectl describe ingress' # kubectl get ingress -n namespace
+
+alias kbdesig='kubectl describe ingress' # kubectl get ingress -n namespace
 alias kbcontext='kubectl config current-context' # kubectl config current-context {ingress} -n {namespace}
 alias kbconfigview='kubectl config view' # kubectl get configview
 alias kbsetns=' kubectl config set-context --current --namespace=' # set current namespace
