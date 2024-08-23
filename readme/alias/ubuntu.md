@@ -79,6 +79,7 @@ alias kbdelpod='kubectl delete pod -f'
 alias kbdelig='kubectl delete ingress -f' 
 alias kbgetall='kubectl get all'
 alias kball='kubectl get all'
+alias kballns='kubectl get all --all-namespaces'
 alias kbig='kubectl get ingress' # kubectl get ingress -n namespace
 alias kbgetsystem='kubectl get pod -n kube-system'
 alias kbgetnsdb='kubectl get all -n kubernetes-dashboard'
