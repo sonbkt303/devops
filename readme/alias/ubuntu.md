@@ -35,7 +35,7 @@ dkbuild () {
 
 # Kubectl
 alias kb='kubectl'
-alias kbdpm='kubectl get deployments'
+alias kbdpl='kubectl get deployments'
 alias kbcluster='kubectl cluster-info'
 alias kbapply='kubectl apply -f'
 
@@ -53,7 +53,7 @@ alias kbsvcdel='kubectl delete service'
 
 alias kbview='kubectl config view'
 alias kblogs='kubectl logs'
-alias kbdpmdel='kubectl delete deployment'
+alias kbdeldpl='kubectl delete deployment'
 alias kbproxy='kubectl proxy'
 alias kbdes='kubectl describe'
 alias kbdespod='kubectl describe pods'
@@ -73,9 +73,10 @@ alias kbdeljob='kubectl delete job'
 alias kbdelpod='kubectl delete pod'
 alias kbdelcj='kubectl delete cronjob'
 alias kbdelrs='kubectl delete rs'
-alias kbdeldpm='kubectl delete deployment'
+alias kbdeldpl='kubectl delete deployment'
 alias kbdelsvc='kubectl delete service'
 alias kbdelpod='kubectl delete pod -f' 
+alias kbdelig='kubectl delete ingress -f' 
 alias kbgetall='kubectl get all'
 alias kball='kubectl get all'
 alias kbig='kubectl get ingress' # kubectl get ingress -n namespace
