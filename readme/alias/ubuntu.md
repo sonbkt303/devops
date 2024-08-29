@@ -200,6 +200,8 @@ alias mndel='minikube delete -p' # Delete profile minikube from mnprofile
 alias mnads='minikube addons list' # Dminikube addons list
 alias mnsvc="minikube service --all"
 alias mnsvcls="minikube service list"
+alias mnssh="minikube ssh"
+
 
 alias mnenableingress="minikube addons enable ingress"
 alias mnauditlogs="cat ~/.minikube/logs/audit.json"
