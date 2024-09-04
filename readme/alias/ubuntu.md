@@ -41,6 +41,7 @@ alias kbapply='kubectl apply -f'
 
 
 alias kbsvc='kubectl get svc'
+alias kbsvcmnt='kubectl get servicemonitor'
 alias kbpods='kubectl get pods -o wide'
 alias kbdespods='kubectl describe pods'
 
