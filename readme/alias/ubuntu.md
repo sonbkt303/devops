@@ -87,10 +87,6 @@ alias kbgetnsdb='kubectl get all -n kubernetes-dashboard'
 alias kbcfm='kubectl get configmap'
 alias kbsecret='kubectl get secret'
 
-
-
-
-
 alias kbcreatens='kubectl create namespace'
 alias kbconfigmap='kubectl get configmap' # kubectl get configmap -n (n is namespace)
 alias kbcreatetoken='kubeadm token create --print-join-command' 
@@ -102,12 +98,16 @@ alias kbconfigview='kubectl config view' # kubectl get configview
 alias kbsetns=' kubectl config set-context --current --namespace=' # set current namespace
 alias kbendpoint='kubectl get endpoints' # set current namespace
 
+# Kubectl Service Account
 
-
+alias kbcreatesa='kubectl create serviceaccount' # Create service account *
+alias kbsa='kubectl get serviceaccount'
+alias kbdessa='kubectl describe serviceaccount'
+alias kbsecretsa='kubectl describe secret'
+alias kbcreatetokensa='kubectl create token'
 
 # alias kbdfnodeport="export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}')"
 # alias kbdfnamepod="export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')"
-
 
 
 kbenv () {
