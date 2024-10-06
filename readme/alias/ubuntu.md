@@ -11,6 +11,7 @@ alias gadd='git add .'
 
 # DOCKER
 
+alias dk='docker'
 alias dkps='docker ps'
 alias dkpsa='docker ps -a'
 alias dkimg='docker images'
@@ -283,6 +284,8 @@ alias terpath='cd /home/ku_dev/repositories/terraform'
 alias refresh='source ~/.bash_aliases'
 alias sshgen='ssh-keygen -m PEM -t rsa -b 4096' # ssh-keygen -t rsa -b 4096 -C "your_email@example.com" -f $HOME/.ssh/
 alias net='netstat -ln'
+alias listen='lsof -i'
+alias killport='sudo kill -9'
 
 
 
