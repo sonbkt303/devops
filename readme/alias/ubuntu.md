@@ -114,6 +114,14 @@ alias kbdessa='kubectl describe serviceaccount'
 alias kbsecretsa='kubectl describe secret'
 alias kbcreatetokensa='kubectl create token'
 
+
+# Kubectl Monitoring
+alias kbtoppodmem="kubectl top pod --sort-by=memory"
+alias kbtopnodemem="kubectl top nodes --sort-by=memory"
+alias kbtopnodecpu="kubectl top nodes --sort-by=cpu"
+alias kbtoppodcpu="kubectl top pod --sort-by=cpu"
+
+
 # alias kbdfnodeport="export NODE_PORT=$(kubectl get services/kubernetes-bootcamp -o go-template='{{(index .spec.ports 0).nodePort}}')"
 # alias kbdfnamepod="export POD_NAME=$(kubectl get pods -o go-template --template '{{range .items}}{{.metadata.name}}{{"\n"}}{{end}}')"
 
