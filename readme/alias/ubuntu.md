@@ -102,6 +102,10 @@ alias kbconfigview='kubectl config view' # kubectl get configview
 alias kbsetns=' kubectl config set-context --current --namespace=' # set current namespace
 alias kbendpoint='kubectl get endpoints' # set current namespace
 
+alias kbtopnode='kubectl top node'
+alias kbtoppod='kubectl top pod'
+
+
 # Kubectl Service Account
 
 alias kbcreatesa='kubectl create serviceaccount' # Create service account *
