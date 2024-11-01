@@ -301,6 +301,8 @@ alias sshgen='ssh-keygen -m PEM -t rsa -b 4096' # ssh-keygen -t rsa -b 4096 -C "
 alias net='netstat -ln'
 alias listen='lsof -i'
 alias killport='sudo kill -9'
+alias sshEvn='ssh mike@172.76.10.186'
+
 
 
 
